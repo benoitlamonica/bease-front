@@ -1,0 +1,64 @@
+$sizes: 25, 33, 50, 75, 100;
+$gaps: 5, 10, 20, 30, 50;
+
+.flex-inline {
+  display: flex;
+  flex-direction: row;
+  @each $size in $sizes {
+    .flex-basis-#{$size} {
+      $percent: unquote("%");
+      flex-basis: #{$size}$percent;
+    }
+  }
+}
+
+@each $gap in $gaps {
+  .gap-#{$gap} {
+    margin-right: -#{$gap}px;
+    padding-bottom: #{$gap}px;
+    > div {
+      margin-right: #{$gap}px;
+    }
+    @each $size in $sizes {
+      .flex-basis-#{$size} {
+        $percent: unquote("%");
+        $divSize: #{$size}$percent;
+        flex-basis: calc(#{$divSize} - #{$gap}px);
+      }
+    }
+  }
+  .gap-#{$gap}.responsive {
+    margin-bottom: -#{$gap}px;
+    > div {
+      margin-bottom: #{$gap}px;
+    }
+  }
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+
+.flex-center {
+  justify-content: center;
+}
+.flex-around {
+  justify-content: space-around;
+}
+.flex-between {
+  justify-content: space-between;
+}
+
+.responsive {
+  flex-wrap: wrap;
+  > div {
+    flex-grow: 1;
+    min-width: 300px;
+  }
+}
