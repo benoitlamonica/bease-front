@@ -25,9 +25,6 @@ a {
 }
 
 .beautiful-div {
-  border: 2px solid $soft-color;
-  border-radius: $main-radius;
-  padding: 0 1em;
 }
 
 h1,
@@ -48,6 +45,7 @@ h4 {
   color: $bg-color;
   background-color: $second-color;
   border-radius: 0.5em;
+  white-space: nowrap;
 }
 
 @each $size in $imgSizes {

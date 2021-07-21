@@ -3,21 +3,24 @@ import React from 'react';
 const content = [
     {
         text: 'Getting Started',
-        link: './',
+        link: '/getstarted',
         icon: '',
-        targetBlank: false
+        targetBlank: false,
+        type: 'router'
     },
     {
         text: 'Documentation',
-        link: '#',
+        link: '/doc',
         icon: '',
-        targetBlank: false
+        targetBlank: false,
+        type: 'router'
     },
     {
         text: 'GitHub',
         link: 'https://github.com/benoitlamonica/easydiscordbot',
-        icon: <i class="fab fa-github"></i>,
-        targetBlank: true
+        icon: <i className="fab fa-github"></i>,
+        targetBlank: true,
+        type: 'link'
     }
 ];
 

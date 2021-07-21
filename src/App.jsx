@@ -1,18 +1,19 @@
 import Header from "./components/Header";
-import Hero from "./modules/Hero";
-import Main from "./modules/Main";
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
+import { BrowserRouter as Router } from "react-router-dom";
+import RouteContent from "./routes";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Wrapper>
-        <Hero />
-        <Main />
-      </Wrapper>
-      <Footer />
+      <Router>
+        <Header />
+        <Wrapper>
+          <RouteContent />
+        </Wrapper>
+        <Footer />
+      </Router>
     </div>
   );
 }

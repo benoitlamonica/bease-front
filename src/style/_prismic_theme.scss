@@ -6,6 +6,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
+  overflow-y: hidden;
   color: black;
   background: none;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -30,8 +31,7 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
   position: relative;
-  border-radius: 1em;
-  padding: 1em;
+  border-radius: $main-radius;
   border: 1px solid $soft-color;
   border-left: 10px solid $main-color;
   background-color: #fdfdfd;
@@ -42,8 +42,8 @@ pre[class*="language-"] {
   background-size: 3em 3em;
   background-origin: content-box;
   background-attachment: local;
-  margin: 0.5em 0;
-  padding: 0 1em;
+  margin: 1em 0;
+  padding: 1em;
 }
 
 pre[class*="language-"] > code {

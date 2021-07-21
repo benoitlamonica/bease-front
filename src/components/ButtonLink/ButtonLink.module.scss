@@ -1,0 +1,60 @@
+@import "../../style/variable";
+.buttonLink {
+  margin: 1em 1em 1em 0;
+  appearance: none;
+  border: none;
+  padding: 1.2em;
+  transition: 0.4s ease;
+  cursor: pointer;
+  border-radius: $main-radius;
+  a {
+    text-decoration: none;
+  }
+}
+.blue {
+  background-color: $main-color;
+  border: 1px solid $main-color;
+  &:hover {
+    background-color: $bg-color;
+    a {
+      color: $main-color;
+    }
+  }
+  a {
+    color: $bg-color;
+  }
+}
+.grey {
+  background-color: $soft-color;
+  border: 1px solid $soft-color;
+  &:hover {
+    background-color: $bg-color;
+  }
+  a {
+    color: $text-color;
+  }
+}
+.white {
+  background-color: $bg-color;
+  border: 1px solid $main-color;
+  &:hover {
+    background-color: $main-color;
+    a {
+      color: $bg-color;
+    }
+  }
+  a {
+    color: $main-color;
+  }
+}
+
+.whitegrey {
+  background-color: $bg-color;
+  border: 1px solid $soft-color;
+  &:hover {
+    background-color: $soft-color;
+  }
+  a {
+    color: $text-color;
+  }
+}

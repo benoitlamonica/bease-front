@@ -15,6 +15,10 @@
     h1 {
       font-size: 20px;
       color: $text-color;
+      > a {
+        color: $text-color;
+        text-decoration: none;
+      }
     }
     nav {
       ul {

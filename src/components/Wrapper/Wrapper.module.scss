@@ -1,6 +1,7 @@
 .wrapper {
-  $top-padding: 10%;
+  $top-padding: 130px;
   padding: $top-padding 15% 1em;
+  min-height: 80vh;
   @media (max-width: 400px) {
     padding: $top-padding 8% 1em;
   }
