@@ -1,7 +1,14 @@
+@import "./prismic_theme";
+$imgSizes: 100, 90, 80, 70, 60, 50, 40, 30, 20, 10;
+
 * {
   box-sizing: border-box;
 }
-
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: $bg-color;
   font-family: $main-font;
@@ -9,6 +16,7 @@ body {
 
 p {
   line-height: 28px;
+  color: $text-color;
 }
 
 a {
@@ -17,19 +25,22 @@ a {
 }
 
 .beautiful-div {
+  border: 2px solid $soft-color;
+  border-radius: $main-radius;
   padding: 0 1em;
-  background-color: $main-color-light;
-  border-radius: 1em;
 }
 
 h1,
 h2 {
-  color: $main-color;
+  color: $text-color;
+}
+h2 {
+  margin-top: 3em;
 }
 
 h3,
 h4 {
-  color: $second-color;
+  color: $main-color;
 }
 
 .code-basics {
@@ -37,4 +48,19 @@ h4 {
   color: $bg-color;
   background-color: $second-color;
   border-radius: 0.5em;
+}
+
+@each $size in $imgSizes {
+  .tuto-img-#{$size} {
+    display: flex;
+    $percent: unquote("%");
+    > img {
+      display: block;
+      border-radius: $main-radius;
+      margin: auto;
+      width: #{$size}$percent;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }

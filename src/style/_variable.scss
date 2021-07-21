@@ -1,6 +1,8 @@
 // Imports --------------------
-@import "~prismjs/themes/prism.css";
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
 // ----------------------------
 
 // Fonts ----------------------
@@ -10,6 +12,12 @@ $main-font: "Comfortaa", cursive;
 // Colors ---------------------
 $bg-color: #ffffff;
 $main-color: #6182ff;
-$main-color-light: rgba($main-color, 0.1);
+$main-color-light: rgba($main-color, 0.03);
 $second-color: #89a2ff;
+$text-color: #242424;
+$soft-color: #2424240e;
+// ----------------------------
+
+// Misc -----------------------
+$main-radius: 1em;
 // ----------------------------

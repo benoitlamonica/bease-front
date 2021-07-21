@@ -1,0 +1,10 @@
+@import "../../style/variable";
+
+.footer {
+  background-color: $soft-color;
+  > div {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

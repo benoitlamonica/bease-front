@@ -1,34 +1,20 @@
 import React from "react";
-import { IconSmallInv } from "../../assets/img/logo";
+import Nav from "../Nav";
 import style from "./Header.module.scss";
 
 function Header() {
+  console.log(style);
   return (
-    <header
-      className={`${style.header} flex-inline align-items-center flex-between`}
-    >
-      <div className="flex-inline align-items-center">
-        <img src={IconSmallInv} alt="Main icon" />
-        <h1>Bease</h1>
+    <header className={`${style.header}`}>
+      <div className={style.headerColor}></div>
+      <div
+        className={`${style.headerContent} flex-inline align-items-center flex-between`}
+      >
+        <div className="flex-inline align-items-center">
+          <h1>Bease.js</h1>
+        </div>
+        <Nav />
       </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="./">Getting Started</a>
-          </li>
-          <li>
-            <a href="">Documentation</a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/benoitlamonica/easydiscordbot"
-              target="_blank"
-            >
-              GitHub
-            </a>
-          </li>
-        </ul>
-      </nav>
     </header>
   );
 }
